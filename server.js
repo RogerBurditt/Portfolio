@@ -11,7 +11,7 @@ nextApp.prepare().then(() => {
   const handle = nextApp.getRequestHandler();
 
   app.get('/', (req, res) => {
-    return nextApp.render(req, res, '/index', req.query);
+    return nextApp.render(req, res, '/Index', req.query);
   });
 
   app.get('/TwitchShowcase', (req, res) => {
@@ -23,7 +23,7 @@ nextApp.prepare().then(() => {
   });
 
   app.get('*', (req, res) => {
-    return nextApp.render(req, res, '/index', req.query);
+    return nextApp.render(req, res, '/Index', req.query);
   });
 
   server.listen(port, err => {

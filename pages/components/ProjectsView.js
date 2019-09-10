@@ -13,7 +13,7 @@ class ProjectsView extends Component{
           <p>Twitch Showcase</p>
           <img src="/static/TSThumb.png"/>
           <a target="_blank" href="/twitchshowcase" style={{float:"left"}}>Live</a>
-          <a target="_blank" href="https://github.com/RogerBurditt/PortfolioSite" style={{float:"right"}}>Code</a><br/>
+          <a target="_blank" href="https://github.com/RogerBurditt/Portfolio" style={{float:"right"}}>Code</a><br/>
         </div>
       </div>
     )

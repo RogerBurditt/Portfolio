@@ -39,7 +39,10 @@ class Index extends Component{
       newTitle = "Hub: Resume";
     }
 
-    this.setState({view:newView, title:newTitle, drawerOpen: false})
+    this.setState({view:newView, title:newTitle});
+
+    if(this.mql.matches){ this.setState({drawerOpen: false}); }
+    else{ this.setState({drawerOpen: true}); }
   }
 
   // ()=> to maintain context

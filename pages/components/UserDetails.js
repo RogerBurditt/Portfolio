@@ -4,6 +4,8 @@ class UserDetails extends Component{
   constructor(props){
     super(props);
     this.props = props;
+
+    this.ready = false;
   }
 
   description(){
@@ -16,12 +18,25 @@ class UserDetails extends Component{
     }
   }
 
+  componentDidMount(){
+    this.ready = true;
+  }
+
   render(){
-    return (
+    let details;
+
+    if(this.ready){
+      details =
       <div>
         <p>User: {this.props.user.login}</p>
         <p>Id: {this.props.user.id}</p>
         {this.description()}
+      </div>
+    }
+
+    return (
+      <div>
+        {details}
       </div>
     )
   }

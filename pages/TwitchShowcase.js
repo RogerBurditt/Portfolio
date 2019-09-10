@@ -144,7 +144,7 @@ mediaQueryChanged(){
               <p key={user.user_id}>
                 <a key={user.user_id} role="button"
                   onClick={(e) => this.changeCurrentOnClick(e)}
-                  style={{cursor:"pointer"}}>{}
+                  style={{cursor:"pointer"}}>{user.login}
                 </a>
               </p>
             )}>

@@ -29,7 +29,8 @@ class UserDetails extends Component{
       details =
       <div>
         <p>User: {this.props.user.login}</p>
-        <p>Id: {this.props.user.id}</p>
+        <p>Id: {this.props.user.user_id}</p>
+        <p>Type: {this.props.user.broadcaster_type}</p>
         {this.description()}
       </div>
     }

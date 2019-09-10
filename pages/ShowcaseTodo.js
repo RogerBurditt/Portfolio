@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/main.css';
 import ResponsiveDrawer from './components/ResponsiveDrawer.js';
 import DrawerToggleButton from './components/DrawerToggleButton.js';
+import Footer from './components/Footer.js';
 
 class ShowcaseTodo extends Component{
   constructor(props){
@@ -71,30 +72,23 @@ class ShowcaseTodo extends Component{
     </div>
 
     return (
-        <div>
+      <div>
         <DrawerToggleButton click={this.toggleDrawer} />
         <ResponsiveDrawer click={this.toggleDrawer} open={this.state.drawerOpen} content={sidebar} />
 
-  <div id="main">
-    <section id="top" className="two cover">
-      <div className="container">
-      {this.state.todoList.map((item) =>
-          <p key={item}>
-            <li
-              style={{color:"black"}}>{item}
-            </li>
-          </p>
-        )}
+        <div id="main">
+          <section id="top" className="two cover">
+            <div className="container">
+              {this.state.todoList.map((item) =>
+                <p key={item}>
+                <li style={{color:"black"}}>{item}</li>
+                </p>
+              )}
+            </div>
+          </section>
+        </div>
+        <Footer />
       </div>
-    </section>
-  </div>
-  <div id="footer">
-    <ul className="copyright">
-      <li><a href="/">Roger Burditt Jr.</a></li><br/><br/>
-        <li>Built on: Node | Next.js | Express | Webpack | React</li>
-    </ul>
-  </div>
-</div>
     );
   }
 }

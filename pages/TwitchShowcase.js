@@ -7,6 +7,7 @@ import ClipBox from './components/ClipBox';
 import UserDetails from './components/UserDetails';
 import ResponsiveDrawer from './components/ResponsiveDrawer.js';
 import DrawerToggleButton from './components/DrawerToggleButton.js';
+import Footer from './components/Footer.js';
 
 class TwitchShowcase extends Component{
   constructor(props){
@@ -159,31 +160,21 @@ mediaQueryChanged(){
 
 
     return (
-<div>
-<DrawerToggleButton click={this.toggleDrawer} />
-<ResponsiveDrawer click={this.toggleDrawer} open={this.state.drawerOpen} content={sidebar} />
-<div id="main">
-<section id="top" className="one dark cover">
-<div className="container">
-<ClipBox
-className="main"
-clip={this.state.clip}>
-</ClipBox>
-</div>
-</section>
-<section id="about" className="three">
-<div className="container">
-{userDetails}
-</div>
-</section>
-</div>
-<div id="footer">
-<ul className="copyright">
-<li><a href="/">Roger Burditt Jr.</a></li><br/><br/>
-<li>Built on: Node | Next.js | Express | Webpack | React</li><br/><br/>
-</ul>
-</div>
-</div>
+      <div>
+        <DrawerToggleButton click={this.toggleDrawer} />
+        <ResponsiveDrawer click={this.toggleDrawer} open={this.state.drawerOpen} content={sidebar} />
+        <div id="main">
+          <section id="top" className="one dark cover">
+            <div className="container">
+              <ClipBox className="main" clip={this.state.clip} />
+            </div>
+          </section>
+          <section id="about" className="three">
+            <div className="container">{userDetails}</div>
+          </section>
+        </div>
+        <Footer />
+      </div>
     );
   }
 }

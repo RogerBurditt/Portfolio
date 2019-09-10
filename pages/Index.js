@@ -4,6 +4,7 @@ import ProjectsView from './components/ProjectsView.js';
 import ResumeView from './components/ResumeView.js';
 import ResponsiveDrawer from './components/ResponsiveDrawer.js';
 import DrawerToggleButton from './components/DrawerToggleButton.js';
+import Footer from './components/Footer.js';
 
 class Index extends Component{
   constructor(props){
@@ -91,21 +92,16 @@ mediaQueryChanged(){
 
     return (
       <div>
-      <DrawerToggleButton click={this.toggleDrawer} />
-      <ResponsiveDrawer click={this.toggleDrawer} open={this.state.drawerOpen} content={sidebar} />
-      <div id="main">
-      <section id="top" className="two cover">
-      <div className="container">
-      {this.state.view}
-      </div>
-      </section>
-      </div>
-      <div id="footer">
-      <ul className="copyright">
-      <li><a href="/">Roger Burditt Jr.</a></li><br/><br/>
-      <li>Built on: Node | Next.js | Express | Webpack | React</li>
-      </ul>
-      </div>
+        <DrawerToggleButton click={this.toggleDrawer} />
+        <ResponsiveDrawer click={this.toggleDrawer} open={this.state.drawerOpen} content={sidebar} />
+        <div id="main">
+          <section id="top" className="two cover">
+            <div className="container">
+              {this.state.view}
+            </div>
+          </section>
+        </div>
+        <Footer />
       </div>
     );
   }

@@ -22,10 +22,6 @@ nextApp.prepare().then(() => {
     return nextApp.render(req, res, '/ShowcaseTodo', req.query);
   });
 
-  app.get('*', (req, res) => {
-    return handle(req, res);
-  });
-
   server.listen(port, err => {
     if (err) throw err;
   });
